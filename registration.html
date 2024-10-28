@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body{
+            background-color: rgb(189, 144, 231);
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        function validateForm()
+        {
+            var emailID = document.registerForm.email.value;
+            var phno = document.registerForm.phnno.value;
+            var courses = document.registerForm.course.value;
+            var loc = document.registerForm.location.value;
+            var ag = document.registerForm.age.value;
+
+            if(phno.length != 10)
+                alert("Please enter a valid mobile number");
+            else if(courses == null)
+                alert("Please select courses");
+            else if(loc == null)
+                alert("Please select location");
+            else if(ag <= 0 || ag >= 100)
+                alert("Please enter a valid age");
+            else   
+                alert("Submitted successfully");
+        }
+    </script>
+</head>
+<body>
+    <h1>Register Now!!</h1>
+    <form action="validateForm" name = "registerForm">
+        <div id="email">
+            email ID : <input type="email" name="email">
+        </div>
+        <div id="phnno">
+            Phone number : <input type="number" name="phhno">
+        </div>
+        <div id="course">
+            Courses : 
+                <input type="checkbox" value = "DSA"> DSA
+                <input type="checkbox" value = "DAA"> DAA
+                <input type="checkbox" value = "DBMS"> DBMS
+        </div>
+        <div id="location">    
+            Location :
+            <select name="" id="">
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Pune">Pune</option>
+                <option value="Noida">Noida</option>
+            </select>
+        </div>
+        <div id="age">
+            Age : <input type="number">
+        </div>
+        <div>
+            <button type="submit" onclick=validateForm()>Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
