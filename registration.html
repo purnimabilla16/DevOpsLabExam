@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        .page{
+            font-size: 30px;
+            position: relative;
+            text-align: center;
+            top : 200px;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="backend.php" class="page">
+      <div>
+        <label for="fname">First Name : </label>
+        <input type="text" placeholder="John" required />
+      </div>
+
+      <div>
+        <label for="lname">Last Name : </label>
+        <input type="text" placeholder="Doe" required />
+      </div>
+
+      <div>
+        <label for="age">Age : </label>
+        <input type="number" required />
+      </div>
+
+      <div>
+        <label for="email">Email : </label>
+        <input type="email" placeholder="johndoe@gmail.com" required />
+      </div>
+
+      <div>
+        <label for="year">Year : </label>
+        <select name="year" id="year">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="courses">Courses : </label>
+        <input type="checkbox" />DSA <input type="checkbox" />DAA
+        <input type="checkbox" />FLAT
+      </div>
+
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
